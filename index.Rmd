@@ -1,0 +1,27 @@
+---
+title: "Dev Data Prod - W2 Assignment"
+author: "Rafael Lavagna"
+date: "25 de junio de 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Montevideo - 25/6/2018
+
+```{r, eval = TRUE, echo= FALSE, warning=FALSE}
+library(leaflet)
+
+icon_escudo <- makeIcon(iconUrl = "https://www.nacional.uy/cache/com_zoo/images/escudo_oficial_2015_75a83c5efedc6479b124685f8cf9e344.jpg",
+                 iconWidth = 31*215/230, iconHeight = 40,
+                 iconAnchorX = 31*215/230/2, iconAnchorY = 16
+                 )
+
+map <- leaflet() %>% addTiles() %>% addMarkers(lat = -34.8844, lng=-56.158741,
+       popup="<a href='http://granparquecentral.uy/'>Gran Parque Central</a>", icon = icon_escudo)
+map
+```
+
+
